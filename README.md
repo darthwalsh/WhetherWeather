@@ -33,6 +33,7 @@ Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
 		- [ ] Hourly temp
 		- [ ] Precipitation
 	- [ ] Draw metrics visually
+		- [ ] https://stackoverflow.com/questions/246525/how-can-i-draw-a-bezier-curve-using-pythons-pil
 - [ ] v2?
 	- [ ] Customizing physical location, configuring which metrics to show
 	- [ ] Log time scale
@@ -42,6 +43,7 @@ Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
 		- [ ] Moon brightness / phase
 		- [ ] Wind
 		- [ ] UV index
+		- [ ] Tides
 	- [ ] Minimizing API calls, by writing to S3 as a cache or using a caching reverse-proxy
 		- [ ] https://developers.cloudflare.com/r2/pricing/#free-tier
 		- [ ] https://developers.cloudflare.com/cache/
