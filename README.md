@@ -41,6 +41,7 @@ Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
 		- [ ] Barometric pressure
 		- [ ] AQI
 		- [ ] Moon brightness / phase
+		- [ ] Dawn/Sundise
 		- [ ] Wind
 		- [ ] UV index
 		- [ ] Tides
