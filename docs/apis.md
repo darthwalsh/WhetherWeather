@@ -1,5 +1,7 @@
 # Interesting Weather APIs
 
+## Weather
+https://github.com/chubin/wttr.in#json-output
 ## moon brightness, sunrise times
 https://github.com/mourner/suncalc
 ## Current Marin rain map:
@@ -9,6 +11,7 @@ linked from [https://marinflooddistrict.org/weather-gauges/](https://marinfloodd
 ## Moon Parameters
 https://www.meteomatics.com/en/api/available-parameters/moon/
 https://www.meteomatics.com/en/weather-api/#api-packages
+wttr.in/Moon
 ## Historical weather 
 https://openweathermap.org/history 
 But: https://openweathermap.org/full-price#history **150 USD**/ month
