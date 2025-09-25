@@ -47,7 +47,7 @@ docker run -p 8000:8000 whetherweather
 	- [ ] Pick weather API sources and starting weather metrics
 		- [ ] Hourly temp
 		- [ ] Precipitation
-	- [ ] Figure out the exact size of my android home screen for rendering
+	- [x] Figure out the exact size of my android home screen for rendering
 	- [ ] Draw metrics visually
 		- [ ] https://stackoverflow.com/questions/246525/how-can-i-draw-a-bezier-curve-using-pythons-pil
 - [ ] v2?

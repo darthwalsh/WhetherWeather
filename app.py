@@ -3,7 +3,7 @@ import io
 
 from astral.geocoder import database, lookup
 from astral.sun import dawn, sunrise
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse
 from font_fredoka_one import FredokaOne
 from PIL import Image, ImageDraw, ImageFont
@@ -18,7 +18,7 @@ def user_timezone():
 
 def user_image_dimensions():
   """TODO(HACK) Return image dimensions for my phone"""
-  return 600, 200
+  return 368, 122
 
 
 def get_sunrise_times():
@@ -39,7 +39,7 @@ def generate_weather_image():
   draw = ImageDraw.Draw(image)
   text = f"dawn {dawn_time.strftime('%H:%M')}\nsunrise {sunrise_time.strftime('%H:%M')}"
   
-  font_size = int(height * 0.4)
+  font_size = int(height * 0.45)
   font = ImageFont.truetype(FredokaOne, font_size)
   
   draw.text((width // 2, height // 2), text, fill="black", font=font, anchor="mm")
@@ -52,8 +52,14 @@ def generate_weather_image():
 
 
 @app.get("/render")
-async def render_weather_image():
+async def render_weather_image(request: Request):
   """HTTP endpoint to render and return the weather image"""
+
+  
+  print("Request headers:")
+  for header_name, header_value in request.headers.items():
+    print(f"  {header_name}: {header_value}")
+
   img_buffer = generate_weather_image()
   
   return StreamingResponse(
