@@ -1,5 +1,6 @@
 import datetime
 import io
+import logging  # MAYBE need to configure logging, maybe allow header or param to set log level
 from zoneinfo import ZoneInfo
 
 from astral.geocoder import database, lookup
@@ -55,11 +56,11 @@ def generate_weather_image():
 @app.get("/render")
 async def render_weather_image(request: Request):
   """HTTP endpoint to render and return the weather image"""
-
-  
-  print("Request headers:")
+  logging.debug("Request headers:")
   for header_name, header_value in request.headers.items():
-    print(f"  {header_name}: {header_value}")
+    logging.debug(f"  {header_name}: {header_value}")
+
+  # MAYBE should set cache headers?
 
   img_buffer = generate_weather_image()
   
