@@ -19,12 +19,11 @@ Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
 ## Tasks
 - [x] PoC
 	- [x] Create PNG image
-	- [x] localhost serve image
+	- [ ] localhost serve image
 	- [x] Some docs for showing the image in a widget
 	- [x] Call a weather API, get i.e daily max/min temps
 	- [x] Render the temps on the image
 - [ ] MVP 1
-	- [ ] Figure out the exact size of my android home screen for rendering
 	- [ ] Deploy cron task to cloud i.e. fly.io
 		- [ ] Basic secrets management
 		- [ ] Install dependencies
@@ -32,6 +31,7 @@ Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
 	- [ ] Pick weather API sources and starting weather metrics
 		- [ ] Hourly temp
 		- [ ] Precipitation
+	- [ ] Figure out the exact size of my android home screen for rendering
 	- [ ] Draw metrics visually
 		- [ ] https://stackoverflow.com/questions/246525/how-can-i-draw-a-bezier-curve-using-pythons-pil
 - [ ] v2?
