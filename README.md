@@ -19,7 +19,7 @@ Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
 ## Tasks
 - [x] PoC
 	- [x] Create PNG image
-	- [ ] localhost serve image
+	- [x] localhost serve image
 	- [x] Some docs for showing the image in a widget
 	- [x] Call a weather API, get i.e daily max/min temps
 	- [x] Render the temps on the image
