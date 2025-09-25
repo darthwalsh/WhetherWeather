@@ -2,6 +2,9 @@
 
 In-progress weather tool that renders an image for a home screen widget.
 
+See the image hosted for free on fly.io:
+![server](https://whetherweather.fly.dev/render)
+
 ## Dev Flow
 
 ```bash
@@ -37,10 +40,10 @@ docker run -p 8000:8000 whetherweather
 	- [x] Call a weather API, get i.e daily max/min temps
 	- [x] Render the temps on the image
 - [ ] MVP 1
-	- [ ] Deploy cron task to cloud i.e. fly.io
-		- [ ] Basic secrets management
-		- [ ] Install dependencies
-		- [ ] Dockerize
+	- [x] Deploy cron task to cloud i.e. fly.io
+		- [x] Install dependencies
+		- [x] Dockerize
+	- [ ] fly.io secrets management
 	- [ ] Pick weather API sources and starting weather metrics
 		- [ ] Hourly temp
 		- [ ] Precipitation
@@ -48,6 +51,7 @@ docker run -p 8000:8000 whetherweather
 	- [ ] Draw metrics visually
 		- [ ] https://stackoverflow.com/questions/246525/how-can-i-draw-a-bezier-curve-using-pythons-pil
 - [ ] v2?
+	- [ ] https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
 	- [ ] Customizing physical location, configuring which metrics to show
 	- [ ] Log time scale
 	- [ ] Other metrics
