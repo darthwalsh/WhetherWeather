@@ -6,7 +6,7 @@ This rules out a PWA: as of 2024 [doesn't support widgets](https://issues.chromi
 [Asked](https://android.stackexchange.com/questions/15356/how-can-i-display-an-image-from-a-url-on-a-home-screen) in 2011: most of the answers are out-of-date
 
 **Answer:** Going forward with these suggestions, even though they can't load an [SVG](https://upload.wikimedia.org/wikipedia/commons/3/30/Vector-based_example.svg):
-- https://play.google.com/store/apps/details?id=com.ibuffed.webimagewidget
+- Using: [Web Image Widget](https://play.google.com/store/apps/details?id=com.ibuffed.webimagewidget)
 	- I like that it's OSS  https://github.com/004helix/RemoteImageWidget/
 	- With a 2x1 widget, it's 368x122 pixels big
 - https://play.google.com/store/apps/details?id=com.yktp.betterurlimagewidget

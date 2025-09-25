@@ -1,5 +1,6 @@
 import datetime
 import io
+from zoneinfo import ZoneInfo
 
 from astral.geocoder import database, lookup
 from astral.sun import dawn, sunrise
@@ -13,7 +14,7 @@ app = FastAPI()
 
 def user_timezone():
   """TODO(HACK) just hardcoding for me"""
-  return datetime.timezone(datetime.timedelta(hours=-8))
+  return ZoneInfo("America/Los_Angeles")
 
 
 def user_image_dimensions():
