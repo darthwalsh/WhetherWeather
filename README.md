@@ -17,12 +17,12 @@ python -m http.server
 Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
 
 ## Tasks
-- [ ] PoC ⏫ 
+- [x] PoC
 	- [x] Create PNG image
 	- [x] localhost serve image
 	- [x] Some docs for showing the image in a widget
-	- [ ] Call a weather API, get i.e daily max/min temps
-	- [ ] Render the temps on the image
+	- [x] Call a weather API, get i.e daily max/min temps
+	- [x] Render the temps on the image
 - [ ] MVP 1
 	- [ ] Figure out the exact size of my android home screen for rendering
 	- [ ] Deploy cron task to cloud i.e. fly.io

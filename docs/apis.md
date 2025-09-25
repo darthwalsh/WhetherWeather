@@ -4,7 +4,8 @@
 https://github.com/chubin/wttr.in#json-output
 
 ## Sunrise
-sun position, sunlight phases (times for sunrise, sunset, dusk, etc.) https://github.com/mourner/suncalc
+JS lib: sun position, sunlight phases (times for sunrise, sunset, dusk, etc.) https://github.com/mourner/suncalc
+PY lib: https://astral.readthedocs.io/en/latest/
 
 https://www.meteomatics.com/en/api/available-parameters/sun/
 ## Current Marin rain map:
