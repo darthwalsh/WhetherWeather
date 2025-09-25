@@ -9,12 +9,25 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-python poc.py
-echo "http://$(ifconfig | rg 'inet (192\S*)' -r '$1' -o):8000/black_circle.png"
-python -m http.server
+python app.py
 ```
 
 Then see [widget docs](docs/widgets.md) for how to use the image in a widget.
+
+## Running locally
+
+Uvicorn is a ASGI server:
+
+```bash
+python -m uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+```
+
+Insider docker:
+
+```bash
+docker build -t whetherweather .
+docker run -p 8000:8000 whetherweather
+```
 
 ## Tasks
 - [x] PoC
