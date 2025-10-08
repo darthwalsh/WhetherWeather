@@ -9,33 +9,46 @@ from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse
 from font_fredoka_one import FredokaOne
 from PIL import Image, ImageDraw, ImageFont
+from pydantic import BaseModel
 
 app = FastAPI()
 
 
-def user_timezone():
-  """TODO(HACK) just hardcoding for me"""
-  return ZoneInfo("America/Los_Angeles")
+class Config(BaseModel):
+  """Configuration settings for the weather app"""
+  timezone: str
+  image_dim: tuple[int, int]
+  location: str
+  
 
-
-def user_image_dimensions():
-  """TODO(HACK) Return image dimensions for my phone"""
-  return 368, 122
+def get_config():
+  """Return the application configuration
+     TODO(HACK) just hardcoding for me"""
+  return Config(
+    timezone="America/Los_Angeles",
+    image_dim=(368, 122),
+    location="San Francisco",
+  )
 
 
 def get_sunrise_times():
   """Return dawn and sunrise times"""
-  location = lookup("San Francisco", database())
+  config = get_config()
+  location = lookup(config.location, database())
+
   utc_time = dawn(location.observer, datetime.date.today())
   sunrise_time = sunrise(location.observer, datetime.date.today())
-  return utc_time.astimezone(user_timezone()), sunrise_time.astimezone(user_timezone())
+
+  timezone = ZoneInfo(config.timezone)
+  return utc_time.astimezone(timezone), sunrise_time.astimezone(timezone)
 
 
 def generate_weather_image():
   """Generate the weather image and return as bytes"""
+  config = get_config()
   dawn_time, sunrise_time = get_sunrise_times()
   
-  width, height = user_image_dimensions()
+  width, height = config.image_dim
   image = Image.new("RGB", (width, height), "white")
   
   draw = ImageDraw.Draw(image)

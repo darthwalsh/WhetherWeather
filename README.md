@@ -65,7 +65,12 @@ docker run -p 8000:8000 whetherweather
 	- [ ] Minimizing API calls, by writing to S3 as a cache or using a caching reverse-proxy
 		- [ ] https://developers.cloudflare.com/r2/pricing/#free-tier
 		- [ ] https://developers.cloudflare.com/cache/
-	- [ ] think again about business brand / name
+	- [ ] Config
+		- [ ] Instead of URL with `id` to a DB entry, put state values into the URL?
+		- [ ] User physical location maps to a default time zone?
+		- [ ] GUI for setting config just generate the URL query param
+	- [ ] Provide google calendar share link (ICS?): find all of your event locations for the next day and show you calendar weather based on those locations
+	- [ ] Think again about business brand / name
 		- [ ] already exists: https://github.com/codersinthestorm/WhetherWeather
 		- [ ] maybe pick another name or make it cute?
 - [ ] Import from obsidian://open?vault=notes&file=MyNotes%2FWhetherWeather
