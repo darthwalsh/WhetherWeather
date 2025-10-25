@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+
+<body style="margin:0;background:#222;display:flex;justify-content:center;align-items:center;height:100vh">
+  <img src="http://localhost:8000/render" style="max-height:100%;max-width:100%">
+  <script>
+    setInterval(() => {
+      document.querySelector("img").src = "http://localhost:8000/render?" + Date.now();
+    }, 1000);
+  </script>
+</body>
+
+</html>
