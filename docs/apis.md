@@ -32,6 +32,10 @@ Or, store values from https://openweathermap.org/current in database
 https://openweathermap.org/api/air-pollution
 ## Barometric pressure
 Heard from Allan that having both static and dynamic pressure might be interesting for predicting storms
+## Feels-Like temperature
+- [ ] See if normal weather API has this too
+- [ ] See if it tracks better "feeling cold" when running
+
 ## TODO
 https://www.meteomatics.com/en/api/available-parameters/#api-basic
 Free API with historical 24hr rain
